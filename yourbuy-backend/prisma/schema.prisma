@@ -1,0 +1,179 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum RiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum OrderSide {
+  BUY
+  SELL
+}
+
+enum OrderType {
+  MARKET
+  LIMIT
+}
+
+enum OrderStatus {
+  PENDING
+  FILLED
+  CANCELLED
+  REJECTED
+}
+
+enum NotificationType {
+  SYSTEM
+  MARKET
+  PORTFOLIO
+  AI
+}
+
+model User {
+  id             String           @id @default(cuid())
+  email          String           @unique
+  username       String           @unique
+  passwordHash   String
+  role           Role             @default(USER)
+  level          Int              @default(1)
+  riskLevel      RiskLevel        @default(MEDIUM)
+  skills         Json?
+  settings       Json?
+  refreshToken   String?          @db.Text
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  portfolio      Portfolio?
+  orders         Order[]
+  watchlists     Watchlist[]
+  notifications  Notification[]
+  conversations  AIConversation[]
+
+  @@index([email])
+}
+
+model Portfolio {
+  id             String     @id @default(cuid())
+  userId         String     @unique
+  cashBalance    Decimal    @default(100000) @db.Decimal(18, 2)
+  totalValue     Decimal    @default(100000) @db.Decimal(18, 2)
+  dayChange      Decimal    @default(0) @db.Decimal(18, 2)
+  dayChangePct   Decimal    @default(0) @db.Decimal(10, 4)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  user           User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  holdings       Holding[]
+  orders         Order[]
+
+  @@index([userId])
+}
+
+model Holding {
+  id            String    @id @default(cuid())
+  portfolioId   String
+  symbol        String
+  name          String?
+  quantity      Decimal   @db.Decimal(18, 6)
+  averagePrice  Decimal   @db.Decimal(18, 4)
+  lastPrice     Decimal   @default(0) @db.Decimal(18, 4)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  portfolio     Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+
+  @@unique([portfolioId, symbol])
+  @@index([symbol])
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  userId       String
+  portfolioId  String
+  symbol       String
+  side         OrderSide
+  type         OrderType   @default(MARKET)
+  status       OrderStatus @default(FILLED)
+  quantity     Decimal     @db.Decimal(18, 6)
+  limitPrice   Decimal?    @db.Decimal(18, 4)
+  executedPrice Decimal?   @db.Decimal(18, 4)
+  metadata     Json?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  portfolio    Portfolio   @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([symbol])
+}
+
+model Watchlist {
+  id        String           @id @default(cuid())
+  userId    String
+  name      String
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assets    WatchlistAsset[]
+
+  @@unique([userId, name])
+  @@index([userId])
+}
+
+model WatchlistAsset {
+  id          String    @id @default(cuid())
+  watchlistId String
+  symbol      String
+  name        String?
+  createdAt   DateTime  @default(now())
+  watchlist   Watchlist @relation(fields: [watchlistId], references: [id], onDelete: Cascade)
+
+  @@unique([watchlistId, symbol])
+  @@index([symbol])
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType @default(SYSTEM)
+  title     String
+  message   String           @db.Text
+  read      Boolean          @default(false)
+  metadata  Json?
+  createdAt DateTime         @default(now())
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, read, createdAt])
+}
+
+model AIConversation {
+  id        String      @id @default(cuid())
+  userId    String
+  title     String?
+  context   Json?
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages  AIMessage[]
+
+  @@index([userId, updatedAt])
+}
+
+model AIMessage {
+  id             String         @id @default(cuid())
+  conversationId String
+  role           String
+  content        String         @db.Text
+  createdAt      DateTime       @default(now())
+  conversation   AIConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}

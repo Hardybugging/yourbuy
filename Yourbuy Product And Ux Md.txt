@@ -1,0 +1,849 @@
+PRODUCT_AND_UX.md
+YourBuy — Product & UX Master Document
+DATABASE ENGINE (VERY IMPORTANT)
+The entire YourBuy project MUST use:
+MySQL ONLY
+Ignore all PostgreSQL references from older documentation.
+All implementations must remain:
+MySQL-compatible
+scalable
+modular
+production-oriented
+1. PRODUCT OVERVIEW
+Product Name
+YourBuy
+Product Type
+AI-powered simulated trading and investing platform.
+Core Product Goal
+Create a platform where users can:
+practice investing
+simulate trading realistically
+•
+•
+•
+•
+•
+•
+1
+
+-- 1 of 20 --
+
+understand markets
+build portfolios
+learn naturally while using the platform
+receive contextual AI intelligence
+WITHOUT the platform feeling like:
+a tutorial app
+a classroom product
+a basic stock simulator
+The experience should feel:
+realistic
+premium
+intelligent
+modern
+startup-grade
+2. TARGET AUDIENCE
+Primary Users
+beginner investors
+students
+aspiring traders
+first-time market participants
+Secondary Users
+intermediate traders
+finance enthusiasts
+experienced users wanting simulation environments
+3. USER EXPERIENCE PHILOSOPHY
+YourBuy must balance:
+Professionalism
++
+Beginner Accessibility
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+2
+
+-- 2 of 20 --
+
++
+Realtime Realism
++
+Contextual Intelligence
+UX Goals
+The product should:
+feel smooth
+feel responsive
+feel intelligent
+remain readable
+avoid overwhelming users
+avoid childish teaching
+remain financially realistic
+4. CORE UX PRINCIPLES
+Principle 1
+Adaptive complexity.
+Users should not see unnecessary complexity early.
+Principle 2
+Education should feel integrated naturally.
+NOT like mandatory lessons.
+Principle 3
+The platform should feel like a real broker platform.
+Principle 4
+AI should enhance workflows.
+•
+•
+•
+•
+•
+•
+•
+3
+
+-- 3 of 20 --
+
+NOT dominate the product.
+Principle 5
+Backend correctness matters more than flashy UI.
+5. USER LEVEL SYSTEM
+Level 1 — Beginner
+Experience Style
+guided
+simplified
+assisted
+less dense
+Features
+onboarding overlays
+contextual explanations
+AI hints
+guided walkthroughs
+simplified dashboards
+safer workflows
+Important Rule
+Do NOT make beginners feel stupid.
+The platform must still feel premium.
+Level 2 — Intermediate / Advanced
+Experience Style
+faster
+denser
+more analytical
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+4
+
+-- 4 of 20 --
+
+less guided
+Features
+advanced analytics
+reduced guidance
+more market data
+advanced chart workflows
+optional advanced features
+Level 3 — Professional Tracking Layer
+Separate optional section.
+Supports:
+deeper analytics
+advanced tracking
+advanced portfolio understanding
+more professional workflows
+6. ONBOARDING EXPERIENCE
+Step 1 — Signup
+User creates account.
+Step 2 — Questionnaire
+Questions determine:
+investing knowledge
+risk understanding
+market familiarity
+preferred learning style
+UI complexity level
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+5
+
+-- 5 of 20 --
+
+Step 3 — Adaptive Setup
+Platform generates:
+adaptive dashboard
+personalized onboarding
+customized AI behavior
+recommended workflows
+7. LANDING PAGE UX
+Landing Page Goals
+Landing page should:
+look premium
+establish trust
+explain product clearly
+showcase AI intelligence
+convert visitors efficiently
+Visual Style
+Inspired by:
+premium fintech startups
+modern broker apps
+clean finance dashboards
+Certus Finance polish
+8. LANDING PAGE STRUCTURE
+Main Sections
+Hero Section
+strong headline
+realtime market visuals
+CTA buttons
+subtle animations
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+6
+
+-- 6 of 20 --
+
+Product Showcase
+portfolio previews
+AI assistant showcase
+smart analytics previews
+AI Intelligence Section
+Show:
+news analysis
+sector intelligence
+portfolio insights
+smart alerts
+Trading Features Section
+Show:
+portfolio tracking
+F&O simulation
+mutual funds
+realtime charts
+Educational Layer Section
+Show:
+adaptive onboarding
+guided workflows
+contextual education
+CTA Section
+Encourage:
+signup
+platform exploration
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+7
+
+-- 7 of 20 --
+
+9. AUTHENTICATION UX
+Login Page
+Should feel:
+clean
+minimal
+modern
+trustworthy
+Signup Flow
+Should feel:
+guided
+frictionless
+premium
+Authentication Rules
+minimal unnecessary fields
+smooth transitions
+fast completion
+10. DASHBOARD PHILOSOPHY
+Dashboard should feel:
+professional
+readable
+realtime
+intelligent
+polished
+Dashboard Goals
+Balance:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+8
+
+-- 8 of 20 --
+
+Information Density
++
+Readability
++
+Realtime Updates
++
+Smooth UX
+11. DASHBOARD LAYOUT SYSTEM
+Hybrid Navigation Architecture
+Top Navigation
+Contains:
+search
+notifications
+AI access
+market overview
+profile controls
+Sidebar / Hamburger
+Contains:
+portfolio
+watchlists
+trading
+mutual funds
+F&O
+learning dashboard
+settings
+advanced analytics
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+9
+
+-- 9 of 20 --
+
+12. RESPONSIVE UX STRATEGY
+Mobile Philosophy
+Mobile experience should remain:
+polished
+professional
+readable
+responsive
+Mobile Requirements
+adaptive navigation
+collapsible sidebar
+optimized charts
+smooth scrolling
+optimized AI panel
+13. INFORMATION DENSITY STRATEGY
+Philosophy
+Use:
+Hybrid Information Density
+Meaning:
+not too empty
+not too cluttered
+Beginner Experience
+cleaner layout
+less noise
+reduced complexity
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+10
+
+-- 10 of 20 --
+
+Advanced Experience
+more analytical density
+faster access to tools
+richer data presentation
+14. PORTFOLIO UX
+Portfolio Goals
+Portfolio should:
+remain readable
+remain realistic
+feel professional
+avoid overwhelming layouts
+Main Sections
+holdings
+profit/loss
+allocation
+sector exposure
+historical performance
+recent activity
+15. WATCHLIST UX
+Watchlist Goals
+Watchlists should:
+update realtime
+feel lightweight
+remain quick to access
+support AI insights
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+11
+
+-- 11 of 20 --
+
+16. MARKET EXPERIENCE UX
+Market Pages Should Include
+realtime charts
+stock overview
+sector performance
+AI insights
+related news
+impacted sectors
+impacted stocks
+17. TRADING UX
+Trading Philosophy
+Trading should feel:
+realistic
+smooth
+trustworthy
+responsive
+Important Rule
+Even though the platform is simulated:
+it should NOT feel fake
+it should NOT scream “simulation app”
+18. ORDER FLOW UX
+Flow
+Select Stock
+↓
+Analyze Market Data
+↓
+Place Simulated Order
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+12
+
+-- 12 of 20 --
+
+↓
+Portfolio Updates
+↓
+Realtime Sync
+19. F&O EXPERIENCE
+Goals
+educationally integrated
+realistic
+visually understandable
+not intimidating initially
+Beginner Strategy
+Use:
+guided overlays
+explanations when needed
+simplified terminology initially
+20. MUTUAL FUND EXPERIENCE
+Goals
+simpler than stocks
+beginner-friendly
+visually clean
+easy comparison flows
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+13
+
+-- 13 of 20 --
+
+21. AI UX PHILOSOPHY
+AI Name
+YourBuy Intelligence
+AI Purpose
+AI should:
+assist users
+explain context
+summarize information
+detect patterns
+enhance workflows
+NOT replace user thinking.
+22. AI POSITIONING SYSTEM
+AI can appear as:
+floating assistant
+contextual side panel
+smart alert engine
+inline intelligence cards
+Users may later customize placement.
+23. AI BEHAVIOR RULES
+AI MUST:
+remain contextual
+understand viewed stocks
+understand portfolio exposure
+understand news context
+understand market context
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+14
+
+-- 14 of 20 --
+
+AI MUST NOT:
+sound generic
+hallucinate data
+promise profits
+behave unrealistically
+24. NEWS INTELLIGENCE UX
+Core Flow
+News
+↓
+AI Analysis
+↓
+Affected Sectors
+↓
+Impacted Stocks
+↓
+Educational Explanation
+UX Goals
+Users should quickly understand:
+what happened
+why it matters
+which sectors are affected
+which stocks are impacted
+25. SMART ALERT UX
+Smart Alerts Should Include
+stock movement alerts
+sector alerts
+portfolio alerts
+news impact alerts
+AI-generated intelligence alerts
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+15
+
+-- 15 of 20 --
+
+Alert Philosophy
+Alerts should:
+feel useful
+avoid spam
+remain readable
+remain contextual
+26. LEARNING EXPERIENCE
+Learning Philosophy
+Learning should happen naturally.
+NOT through:
+forced lessons
+classroom experiences
+interruption-heavy tutorials
+Integrated Learning Methods
+contextual AI explanations
+guided overlays
+realtime examples
+intelligent hints
+progressive unlocking
+27. SETTINGS UX
+Settings Include
+theme mode
+AI positioning
+notification controls
+experience level
+advanced feature toggles
+privacy settings
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+16
+
+-- 16 of 20 --
+
+28. DARK MODE / LIGHT MODE
+Default
+Light mode.
+Support
+dark mode
+remembered preferences
+smooth transitions
+29. SEARCH EXPERIENCE
+Unified Intelligent Search
+Search should support:
+stocks
+sectors
+watchlists
+portfolio assets
+AI contextual results
+news
+30. EXIT EXPERIENCE
+Important Rule
+Users should NOT instantly disable educational guidance.
+Instead:
+show exit questionnaire
+understand why
+adapt system intelligently
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+17
+
+-- 17 of 20 --
+
+31. PERFORMANCE UX PRINCIPLES
+UI should feel:
+smooth
+fast
+responsive
+lightweight
+Optimize
+chart rendering
+dashboard loading
+websocket updates
+AI panel loading
+mobile responsiveness
+32. ANIMATION PHILOSOPHY
+Animations should:
+feel premium
+feel subtle
+improve UX
+avoid distraction
+Use Cases
+transitions
+hover states
+onboarding flows
+dashboard interactions
+AI panel behavior
+33. VISUAL IDENTITY
+YourBuy should visually feel:
+modern
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+18
+
+-- 18 of 20 --
+
+intelligent
+trustworthy
+financially professional
+startup-grade
+34. ENGINEERING UX RULES
+Rule 1
+UI should NEVER feel cluttered.
+Rule 2
+Backend correctness matters more than flashy UI.
+Rule 3
+Beginner users should feel guided, not restricted.
+Rule 4
+Advanced users should move faster.
+Rule 5
+AI should feel integrated naturally.
+Rule 6
+Realtime updates should remain smooth.
+Rule 7
+Learning should remain contextual.
+•
+•
+•
+•
+19
+
+-- 19 of 20 --
+
+Rule 8
+The platform should feel like a real investing product.
+35. FINAL PRODUCT SUMMARY
+YourBuy is designed as:
+a premium investing simulator
+an AI-powered finance intelligence platform
+a realistic trading ecosystem
+an adaptive learning environment
+a scalable fintech-style dashboard system
+The product prioritizes:
+realistic investing UX
+contextual AI assistance
+adaptive complexity
+professional dashboards
+smooth realtime experiences
+clean financial workflows
+while avoiding:
+childish tutorials
+cluttered dashboards
+generic AI behavior
+unrealistic investing flows
+poor mobile experiences
+overwhelming beginner workflows
+END OF PRODUCT_AND_UX.md
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+20
+
+-- 20 of 20 --
+
